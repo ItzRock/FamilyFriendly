@@ -13,7 +13,7 @@ An adjustable non serious mod that kills you if you swear.
 ## How to customize
 Modify the included "naughtywords.txt" file in the plugin's directory to any words you'd like seperated by a new line. This mod intentionally doesn't include many swear words as the mod REALLY likes to false positive.
 
-If you would like include this mod in a modpack or a translation package please do not include the original DLL file. Please list this mod as a  dependency and add your own "naughtywords.txt" file. It should override it, if it doesn't please open a issue on the GitHub repo.
+If you would like include this mod in a modpack or a translation package please do not include the original DLL file. Add a "override.txt" file to override the list or add another "naughtywords.txt" to add more words.
 
 ## Common Issues
 
