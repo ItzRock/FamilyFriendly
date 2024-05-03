@@ -1,0 +1,7 @@
+{
+  "name": "FamilyFriendly",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/ItzRock/FamilyFriendly",
+  "description": "Allows you to sprint for longer.",
+  "dependencies": ["BepInEx-BepInExPack-5.4.2100", "Notest-VoiceRecognitionAPI-1.2.1"]
+}
