@@ -22,11 +22,11 @@ target = "/"
 
 [[build.copy]]
 source = "ts-assets/naughtywords.txt"
-target = "/"
+target = "/BepInEx/plugins/"
 
 [[build.copy]]
 source = "FamilyFriendly/bin/Release/netstandard2.1/AnthonyStai.FamilyFriendly.dll"
-target = "/"
+target = "/BepInEx/plugins/FamilyFriendly/"
 
 [publish]
 communities = ["content-warning"]
