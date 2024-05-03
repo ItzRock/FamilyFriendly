@@ -33,7 +33,7 @@ Please open a issue on the GitHub repo [here](https://github.com/ItzRock/FamilyF
 
 ## Credits
 * [VoiceRecognitionAPI](https://github.com/NotestQ/VoiceRecognitionAPI) for CW port made by [Notest](https://github.com/NotestQ), Original creator [LoafOrc](https://github.com/LoafOrc/VoiceRecognitionAPI). GPL-3.0 licensed. Included in the repository so I can run automated workflows.
-* [Max](https://github.com/MaxWasUnavailable) I borrowed the workflow from [Virality](https://github.com/MaxWasUnavailable/Virality)
+* [Max](https://github.com/MaxWasUnavailable) I borrowed the workflow and csproj file from [Virality](https://github.com/MaxWasUnavailable/Virality) which I presume came from [Xilophor's CW Mod Template](https://github.com/ContentWarningCommunity/Content-Warning-Mod-Templates)
 
 ## License
 
