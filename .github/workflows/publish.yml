@@ -72,4 +72,4 @@ jobs:
         env:
           TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_TOKEN }}
         run: |
-          dotnet tcli publish --config-path assets/thunderstore.toml --file dist/*.zip
+          dotnet tcli publish --config-path thunderstore.toml --file dist/*.zip
