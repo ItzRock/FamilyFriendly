@@ -26,7 +26,7 @@ target = "/"
 
 [[build.copy]]
 source = "FamilyFriendly/bin/Release/netstandard2.1/AnthonyStai.FamilyFriendly.dll"
-target = "/BepInEx/plugins/FamilyFriendly/"
+target = "/"
 
 [publish]
 communities = ["content-warning"]
