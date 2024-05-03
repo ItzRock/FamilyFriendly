@@ -32,4 +32,4 @@ target = "/"
 communities = ["content-warning"]
 repository = "https://thunderstore.io"
 [publish.categories]
-content-warning = ["bepinex", "mods", "client-side"]
+content-warning = ["bepinex", "mods", "clientside"]
