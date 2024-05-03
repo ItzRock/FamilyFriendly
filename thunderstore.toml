@@ -21,6 +21,10 @@ source = "../LICENSE"
 target = "/"
 
 [[build.copy]]
+source = "../naughtywords.txt"
+target = "/"
+
+[[build.copy]]
 source = "../FamilyFriendly/bin/Release/netstandard2.1/FamilyFriendly.dll"
 target = "/BepInEx/plugins/FamilyFriendly/"
 
