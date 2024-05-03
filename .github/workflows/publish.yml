@@ -26,13 +26,13 @@ jobs:
           dotnet restore
           dotnet tool restore
 
-      - name: Pack Solution
+      - name: Build Solution
         run: |
-          dotnet pack --configuration Release
+          dotnet build --configuration Release
 
       - name: Create Thunderstore Package
         run: |
-          dotnet tcli build ./ts-assets/thunderstore.toml --package-version ${{ github.event.release.tag_name }}
+          dotnet tcli build --config-path ./thunderstore.toml --package-version ${{ github.event.release.tag_name }}
 
       - name: Upload Thunderstore Artifact
         uses: actions/upload-artifact@v4
@@ -76,4 +76,4 @@ jobs:
         env:
           TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_TOKEN }}
         run: |
-          dotnet tcli publish --config-path thunderstore.toml --file dist/*.zip
+          dotnet tcli publish --config-path ./ts-assets/thunderstore.toml --file dist/*.zip
