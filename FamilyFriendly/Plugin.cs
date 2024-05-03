@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Unity.VisualScripting;
 using VoiceRecognitionAPI;
 namespace FamilyFriendly {
     [ContentWarningPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_VERSION, true)]
@@ -10,12 +9,24 @@ namespace FamilyFriendly {
     public class Plugin : BaseUnityPlugin {
         readonly string filename = $"naughtywords.txt";
         readonly string overrideFN = $"override.txt";
-   
+
         void Kill(string msg) {
             Logger.LogInfo($"Bro said: {msg}");
             Player.KillLocal();
         }
-
+        string[] ReadPath(string path){
+            List<string> returnedWords = new();
+            using (StreamReader file = new StreamReader(path)) {
+                int counter = 0;
+                string ln;
+                while ((ln = file.ReadLine()) != null) {
+                    returnedWords.Add(ln);
+                    counter++;
+                }
+                file.Close();
+            }
+            return returnedWords.ToArray();
+        }
         private void Awake() {
             // Plugin startup logic
             Logger.LogInfo($"Searching folder: {Paths.PluginPath}");
@@ -26,30 +37,12 @@ namespace FamilyFriendly {
                 for(int i = 0; i < overrides.Count; i++){
                     string path = overrides[i];
                     Logger.LogInfo($"LOADING OVERRIDE PATH: {path}");
-                    // stolen https://www.c-sharpcorner.com/UploadFile/mahesh/how-to-read-a-text-file-in-C-Sharp/
-                    using (StreamReader file = new StreamReader(path)) {
-                        int counter = 0;
-                        string ln;
-                        while ((ln = file.ReadLine()) != null) {
-                            Voice.ListenForPhrase(ln, Kill);
-                            counter++;
-                        }
-                        file.Close();
-                    }
+                    Voice.ListenForPhrases(ReadPath(path), Kill);
                 }
             } else for(int i = 0; i < files.Count; i++){
                 string path = files[i];
                 Logger.LogInfo($"LOADING PATH: {path}");
-                // stolen https://www.c-sharpcorner.com/UploadFile/mahesh/how-to-read-a-text-file-in-C-Sharp/
-                using (StreamReader file = new StreamReader(path)) {
-                    int counter = 0;
-                    string ln;
-                    while ((ln = file.ReadLine()) != null) {
-                        Voice.ListenForPhrase(ln, Kill);
-                        counter++;
-                    }
-                    file.Close();
-                }
+                Voice.ListenForPhrases(ReadPath(path), Kill);
             }
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
