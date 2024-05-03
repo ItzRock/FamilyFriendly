@@ -28,4 +28,4 @@ target = "/BepInEx/plugins/FamilyFriendly/"
 communities = ["content-warning"]
 repository = "https://thunderstore.io"
 [publish.categories]
-content-warning = ["bepinex", "mods", "client-side", "vanilla-compatible"]
+content-warning = ["bepinex", "mods", "client-side"]
