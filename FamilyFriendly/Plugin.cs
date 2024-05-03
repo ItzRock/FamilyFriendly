@@ -23,8 +23,8 @@ namespace FamilyFriendly {
             if(files.Count < 1) { Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} failed to load! Missing {filename}"); return; }
             List<string> overrides = Directory.GetFiles(Paths.PluginPath, overrideFN, SearchOption.AllDirectories).ToList();
             if(overrides.Count > 0) {
-                for(int i = 0; i < files.Count; i++){
-                    string path = files[i];
+                for(int i = 0; i < overrides.Count; i++){
+                    string path = overrides[i];
                     Logger.LogInfo($"LOADING OVERRIDE PATH: {path}");
                     // stolen https://www.c-sharpcorner.com/UploadFile/mahesh/how-to-read-a-text-file-in-C-Sharp/
                     using (StreamReader file = new StreamReader(path)) {
