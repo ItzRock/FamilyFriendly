@@ -4,7 +4,7 @@
 [![Thunderstore Downloads][thunderstore-shield]][thunderstore-url]
 
 # Family Friendly
-![Logo](https://github.com/ItzRock/FamilyFriendly/blob/main/icon.png)
+![Logo](https://github.com/ItzRock/FamilyFriendly/blob/main/thunderstore/icon.png)
 
 An adjustable non serious mod that kills you if you swear.
 
@@ -33,6 +33,7 @@ Please open a issue on the GitHub repo [here](https://github.com/ItzRock/FamilyF
 
 ## Credits
 * [VoiceRecognitionAPI](https://github.com/NotestQ/VoiceRecognitionAPI) for CW port made by [Notest](https://github.com/NotestQ), Original creator [LoafOrc](https://github.com/LoafOrc/VoiceRecognitionAPI). GPL-3.0 licensed. Included in the repository so I can run automated workflows.
+* [Max](https://github.com/MaxWasUnavailable) I borrowed the workflow from [Virality](https://github.com/MaxWasUnavailable/Virality)
 
 ## License
 
