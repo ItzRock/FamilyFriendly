@@ -2,7 +2,7 @@
 schemaVersion = "0.0.1"
 
 [package]
-namespace = "Anthony.Stai"
+namespace = "AnthonyStai"
 name = "FamilyFriendly"
 description = "A non serious mod which kills you if you swear."
 websiteUrl = "https://github.com/ItzRock/FamilyFriendly"
