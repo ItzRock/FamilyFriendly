@@ -67,7 +67,7 @@
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all"/>
-    </ItemGroup>~
+    </ItemGroup>
 
     <!-- MinVer Set Mod Version from Git -->
     <Target Name="SetPluginVersion" BeforeTargets="AddGeneratedFile" DependsOnTargets="MinVer">
@@ -84,7 +84,7 @@
             Condition="$(TargetFramework) == 'netstandard2.1' and $(Configuration) == 'Release' and $(CI) == 'true'"
             DependsOnTargets="SetPluginVersion"
     >
-        <Exec Command="dotnet tcli build --config-path $(ProjectDir)../thunderstore.toml --package-version $(PlainVersion)"/>
+        <Exec Command="dotnet tcli build --config-path $(ProjectDir)../assets/thunderstore.toml --package-version $(PlainVersion)"/>
         <ItemGroup>
             <FilesToRename Include="$(ProjectDir)../dist/*-$(PlainVersion).zip"/>
         </ItemGroup>
