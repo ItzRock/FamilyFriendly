@@ -10,16 +10,33 @@ An adjustable non serious mod that kills you if you swear.
 
 [GitHub](https://github.com/ItzRock/FamilyFriendly), [Thunderstore](https://thunderstore.io/c/content-warning/p/AnthonyStai/FamilyFriendly/)
 
-## How to use
-Modify the included "naughtywords.txt" file in the plugin's directory to any words you'd like seperated by a new line. This mod intentionally doesn't include many swear words as the mod REALLY likes to false positive. I recommend using [NVIDIA Broadcast](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/) to prevent background false positives, I've had my chair say "shit" apparently.
+## How to customize
+Modify the included "naughtywords.txt" file in the plugin's directory to any words you'd like seperated by a new line. This mod intentionally doesn't include many swear words as the mod REALLY likes to false positive.
 
+If you would like include this mod in a modpack or a translation package please do not include the original DLL file. Please list this mod as a  dependency and add your own "naughtywords.txt" file. It should override it, if it doesn't please open a issue on the GitHub repo.
+
+## Common Issues
+
+### My voice is not being detected?
+
+Press Windows Key + Ctrl + S and if a setup menu pops up, follow that. Make sure your default microphone in Windows is set correctly. If you still have issues please follow the troubleshooting guide for the original LC API found [here](https://github.com/LoafOrc/VoiceRecognitionAPI/wiki/Troubleshooting)
+
+### I'm not saying a swear word but it's still killing me?
+
+Windows voice recognition sucks. I can't fix that so if your using a modified list try reducing its length. I tried using a longer swear list before and I couldn't say anything without it false positive.
+
+I also recommend using [NVIDIA Broadcast](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/) to prevent background false positives, I've had my chair say "shit" apparently.
 
 ## Bug Reporting
 
-Please open a issue on the GitHub repo [here](https://github.com/ItzRock/FamilyFriendly/issues). I will re`spond to them as soon as possible.
+Please open a issue on the GitHub repo [here](https://github.com/ItzRock/FamilyFriendly/issues). I will respond to them as soon as possible.
 
 ## Credits
 * [VoiceRecognitionAPI](https://github.com/NotestQ/VoiceRecognitionAPI) for CW port made by [Notest](https://github.com/NotestQ), Original creator [LoafOrc](https://github.com/LoafOrc/VoiceRecognitionAPI). GPL-3.0 licensed. Included in the repository so I can run automated workflows.
+
+## License
+
+Distributed under the GPL-3.0 license. See `LICENSE.txt` for more information.
 
 ## Contributing
 
