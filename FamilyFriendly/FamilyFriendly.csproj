@@ -84,7 +84,7 @@
             Condition="$(TargetFramework) == 'netstandard2.1' and $(Configuration) == 'Release' and $(CI) == 'true'"
             DependsOnTargets="SetPluginVersion"
     >
-        <Exec Command="dotnet tcli build --config-path $(ProjectDir)../assets/thunderstore.toml --package-version $(PlainVersion)"/>
+        <Exec Command="dotnet tcli build --config-path $(ProjectDir)../ts-assets/thunderstore.toml --package-version $(PlainVersion)"/>
         <ItemGroup>
             <FilesToRename Include="$(ProjectDir)../dist/*-$(PlainVersion).zip"/>
         </ItemGroup>
