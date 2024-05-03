@@ -32,7 +32,7 @@ jobs:
 
       - name: Create Thunderstore Package
         run: |
-          dotnet tcli build --config-path $(ProjectDir)../ts-assets/thunderstore.toml --package-version ${{ github.event.release.tag_name }}
+          dotnet tcli build ./ts-assets/thunderstore.toml --package-version ${{ github.event.release.tag_name }}
 
       - name: Upload Thunderstore Artifact
         uses: actions/upload-artifact@v4
