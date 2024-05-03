@@ -12,20 +12,20 @@ BepInEx-BepInExPack = "5.4.2100"
 Notest-VoiceRecognitionAPI = "1.2.1"
 
 [build]
-icon = "./ts-assets/icon.png"
-readme = "README.md"
+icon = "icon.png"
+readme = "../README.md"
 outdir = "./dist"
 
 [[build.copy]]
-source = "./LICENSE"
+source = "../LICENSE"
 target = "/"
 
 [[build.copy]]
-source = "./ts-assets/naughtywords.txt"
+source = "naughtywords.txt"
 target = "/"
 
 [[build.copy]]
-source = "./FamilyFriendly/bin/Release/netstandard2.1/AnthonyStai.FamilyFriendly.dll"
+source = "../FamilyFriendly/bin/Release/netstandard2.1/AnthonyStai.FamilyFriendly.dll"
 target = "/BepInEx/plugins/FamilyFriendly/"
 
 [publish]
